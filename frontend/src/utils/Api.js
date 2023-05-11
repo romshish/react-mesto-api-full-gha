@@ -130,7 +130,8 @@ class Api {
 }
 
 export const api = new Api({
-  url: 'http://localhost:3001/',
+  url: 'http://api.romshish.students.nomoredomains.monster/',
+  // url: 'http://localhost:3001/',
   // headers: {
   //   'Content-Type': 'application/json',
   //   Authorization: '9ca94fef-76cd-4b73-8a46-eb5793e0762e'
