@@ -1,0 +1,6 @@
+@media screen and (max-width: 635px) {
+  .header__authorized {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  }

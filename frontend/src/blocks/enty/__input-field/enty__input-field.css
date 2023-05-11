@@ -1,0 +1,5 @@
+.enty__input-field {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}

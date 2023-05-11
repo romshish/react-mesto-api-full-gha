@@ -1,0 +1,16 @@
+.enty__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 358px;
+  margin: 0 auto 0px;
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 635px) {
+  .enty__form {
+    max-width: 260px;
+    padding-top: 14px;
+}
+}

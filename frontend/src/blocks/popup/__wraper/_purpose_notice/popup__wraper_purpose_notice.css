@@ -1,0 +1,20 @@
+.popup__wraper_purpose_notice {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  max-width: 430px;
+  width: 100%;
+  min-height: 330px;
+  border-radius: 10px;
+  opacity: 100%;
+  padding: 0 36px 0;
+  z-index: 1;
+}
+
+@media screen and (max-width: 635px) {
+  .popup__wraper_purpose_notice{
+    max-width: 280px;
+    min-height: 308px;
+    padding: 0 22px 0;
+}
+}

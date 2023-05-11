@@ -1,0 +1,27 @@
+.header__logout {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-left: 24px;
+  color: #A9A9A9;
+  background-color: #000;
+  border: none;
+  text-align: right;
+  opacity: 1;
+  transition: 0.3s opacity ease-in;
+  cursor: pointer;
+  padding: 0;
+}
+
+.header__logout:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 635px) {
+  .header__logout {
+    text-align: center;
+    margin: 19px 0 0 0;
+}
+}

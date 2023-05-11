@@ -1,0 +1,16 @@
+.enty__question {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.21;
+  color: #fff;
+  margin-top: 15px;
+  padding: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 635px) {
+  .enty__question {
+    margin-top: 21px;
+}
+}

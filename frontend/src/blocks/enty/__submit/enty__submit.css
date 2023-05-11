@@ -1,0 +1,28 @@
+.enty__submit {
+  height: 50px;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 1.2;
+  color: #000;
+  background-color: #fff;
+  margin-top: 216px;
+  opacity: 1;
+  transition: 0.3s opacity ease-in;
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  padding: 0;
+}
+
+.enty__submit:hover {
+  opacity: 0.85;
+}
+
+@media screen and (max-width: 635px) {
+  .enty__submit {
+    height: 46px;
+    margin-top: 173px;
+    font-size: 16px;
+}
+}

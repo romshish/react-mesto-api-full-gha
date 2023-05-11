@@ -1,0 +1,17 @@
+.header__user {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0;
+  color: #ffffff;
+  text-align: right;
+}
+
+@media screen and (max-width: 635px) {
+  .header__user {
+    text-align: center;
+    font-size: 14px;
+}
+}
