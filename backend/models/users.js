@@ -6,14 +6,12 @@ import Unauthorized from '../errors/unauthorized.js';
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    unique: true,
     minlength: 2,
     maxlength: 30,
     default: 'Жак-Ив Кусто',
   },
   about: {
     type: String,
-    unique: true,
     minlength: 2,
     maxlength: 30,
     default: 'Исследователь',
