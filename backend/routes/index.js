@@ -9,14 +9,14 @@ import NotFoundError from '../errors/not-found-err.js';
 const routes = express.Router();
 const { celebrate, Joi } = Celebrate;
 
-routes.post('/sign-in', celebrate({
+routes.post('/signin', celebrate({
   body: Joi.object().keys({
     email: Joi.string().required().email(),
     password: Joi.string().required().min(4),
   }),
 }), login);
 
-routes.post('/sign-up', celebrate({
+routes.post('/signup', celebrate({
   body: Joi.object().keys({
     name: Joi.string().min(2).max(30),
     about: Joi.string().min(2).max(30),
