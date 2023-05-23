@@ -1,4 +1,4 @@
-export const BASE_URL = 'api.romshish.students.nomoredomains.monster/';
+export const BASE_URL = 'https://api.romshish.students.nomoredomains.monster/';
 // export const BASE_URL = 'http://localhost:3001/';
 
 export const register = (password, email) => {
