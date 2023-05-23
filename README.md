@@ -8,7 +8,7 @@
 
 ## Ссылки на проект
 
-51.250.91.162
+IP 51.250.91.162
 
 Frontend https://custo.students.nomoredomains.monster
 
