@@ -2,7 +2,7 @@ import express from 'express';
 import Celebrate from 'celebrate';
 import {
   getUser, getUsers, getUserById, updateUserProfile, updateUserAvatar,
-} from '../controllers/users';
+} from '../controllers/users.js';
 
 const usersRoutes = express.Router();
 const { celebrate, Joi } = Celebrate;

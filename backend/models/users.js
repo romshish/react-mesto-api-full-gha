@@ -1,7 +1,7 @@
 import bcrypt from 'bcryptjs';
 import mongoose from 'mongoose';
 import validator from 'validator';
-import Unauthorized from '../errors/unauthorized';
+import Unauthorized from '../errors/unauthorized.js';
 
 const userSchema = new mongoose.Schema({
   name: {

@@ -2,7 +2,7 @@ import express from 'express';
 import Celebrate from 'celebrate';
 import {
   getCards, createCard, deleteCard, addLike, deleteLike,
-} from '../controllers/cards';
+} from '../controllers/cards.js';
 
 const cardsRoutes = express.Router();
 const { celebrate, Joi } = Celebrate;

@@ -1,7 +1,7 @@
-import Card from '../models/cards';
-import Badrequest from '../errors/bad-request';
-import NotFoundError from '../errors/not-found-err';
-import Forbidden from '../errors/forbidden-err';
+import Card from '../models/cards.js';
+import Badrequest from '../errors/bad-request.js';
+import NotFoundError from '../errors/not-found-err.js';
+import Forbidden from '../errors/forbidden-err.js';
 
 const getCards = (req, res, next) => {
   Card.find({})

@@ -1,6 +1,6 @@
 import jsonwebtoken from 'jsonwebtoken';
-import Unauthorized from '../errors/unauthorized';
-import { JWT_SECRET, NODE_ENV } from '../config';
+import Unauthorized from '../errors/unauthorized.js';
+import { JWT_SECRET, NODE_ENV } from '../config.js';
 
 const jwt = jsonwebtoken;
 

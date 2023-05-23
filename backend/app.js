@@ -3,8 +3,8 @@ import cors from 'cors';
 import * as dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import { errors } from 'celebrate';
-import routes from './routes/index';
-import { requestLogger, errorLogger } from './middlewares/Logger';
+import routes from './routes/index.js';
+import { requestLogger, errorLogger } from './middlewares/Logger.js';
 // import checkSource from './middlewares/cors';
 
 dotenv.config();

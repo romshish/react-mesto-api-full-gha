@@ -1,13 +1,13 @@
 import bcrypt from 'bcryptjs';
 import jsonwebtoken from 'jsonwebtoken';
-import User from '../models/users';
-import { JWT_SECRET, NODE_ENV } from '../config';
+import User from '../models/users.js';
+import { JWT_SECRET, NODE_ENV } from '../config.js';
 import {
   NOT_FOUND,
-} from '../utils/config_errors';
-import Badrequest from '../errors/bad-request';
-import NotFoundError from '../errors/not-found-err';
-import ConflictError from '../errors/conflict-err';
+} from '../utils/config_errors.js';
+import Badrequest from '../errors/bad-request.js';
+import NotFoundError from '../errors/not-found-err.js';
+import ConflictError from '../errors/conflict-err.js';
 
 const getUsers = (req, res, next) => {
   User.find({})

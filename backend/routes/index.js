@@ -1,10 +1,10 @@
 import express from 'express';
 import Celebrate from 'celebrate';
-import auth from '../middlewares/auth';
-import usersRoutes from './users';
-import cardsRoutes from './cards';
-import { createUser, login } from '../controllers/users';
-import NotFoundError from '../errors/not-found-err';
+import auth from '../middlewares/auth.js';
+import usersRoutes from './users.js';
+import cardsRoutes from './cards.js';
+import { createUser, login } from '../controllers/users.js';
+import NotFoundError from '../errors/not-found-err.js';
 
 const routes = express.Router();
 const { celebrate, Joi } = Celebrate;
