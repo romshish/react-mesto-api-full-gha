@@ -5,6 +5,7 @@ export const register = (password, email) => {
   return fetch(`${BASE_URL}sign-up`, {
     method: 'POST',
     headers: {
+      'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({ password, email })
@@ -35,6 +36,7 @@ export const authorize = (email, password) => {
   })
     .then((response => response.json()))
     .then((data) => {
+        console.log(data);
         localStorage.setItem('jwt', data.token);
         return data;
       })

@@ -11,10 +11,10 @@ function Header({ email, handleSignOut }) {
             <p className="header__user">{email}</p>
             <button className="header__logout" onClick={handleSignOut}>Выйти</button>
           </div>} />
-        <Route path="/sign-up" element={
-          <Link className="header__auth-link" to="/sign-in">Регистрация</Link>} />
         <Route path="/sign-in" element={
-          <Link className="header__auth-link" to="/sign-up">Войти</Link>} />
+          <Link className="header__auth-link" to="/sign-up">Регистрация</Link>} />
+        <Route path="/sign-up" element={
+          <Link className="header__auth-link" to="/sign-in">Войти</Link>} />
       </Routes>
     </header >
   );

@@ -33,6 +33,7 @@ function App() {
 
   function handleSignOut() {
     localStorage.removeItem('jwt');
+    setIsLoggedIn(false);
     navigate('/sign-up', { replace: true });
   }
 
@@ -41,11 +42,12 @@ function App() {
   }, [])
 
   useEffect(() => {
+    // const token = localStorage.getItem('jwt');
     if (isLoggedIn) {
       api.getAllNeededData()
         .then(([userData, initialCards]) => {
           setCurrentUser(userData);
-          setCards(initialCards);
+          setCards(initialCards.reverse());
         })
         .catch((err) => {
           console.log(`Произошла ошибка ${err}`);
@@ -56,7 +58,7 @@ function App() {
 
   function tokenCheck() {
     const jwt = localStorage.getItem('jwt');
-    if (localStorage.getItem('jwt')) {
+    if (jwt) {
       auth.checkToken(jwt).then((res) => {
         if (res) {
           setUseremail(res.email);
@@ -148,8 +150,8 @@ function App() {
   }
 
   function handleCardLike(card) {
-    const isLiked = card.likes.some((id) => {
-      return id === currentUser._id;
+    const isLiked = card.likes.some((i) => {
+      return i._id === currentUser._id;
     })
 
     api.changeLikeCardStatus(card._id, !isLiked)
@@ -197,8 +199,8 @@ function App() {
               onCardClick={handleCardClick}
               onCardLike={handleCardLike}
               onCardDelete={handleCardDelete} />} />
-            <Route path="/sign-up" element={<Login onLogin={handleLogin} onLoginedIn={setUseremail} />} />
-            <Route path="/sign-in" element={<Register onRegister={handleRegister} />} />
+            <Route path="/sign-in" element={<Login onLogin={handleLogin} onLoginedIn={setUseremail} />} />
+            <Route path="/sign-up" element={<Register onRegister={handleRegister} />} />
           </Routes>
           <Footer />
           <InfoTooltip isOpen={infoToolTipOpen} onClose={closeAllPopups} isRegistered={isRegistered} />

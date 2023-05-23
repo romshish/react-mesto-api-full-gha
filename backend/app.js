@@ -5,17 +5,23 @@ import mongoose from 'mongoose';
 import { errors } from 'celebrate';
 import routes from './routes/index';
 import { requestLogger, errorLogger } from './middlewares/Logger';
+// import checkSource from './middlewares/cors';
 
 dotenv.config();
 
 const app = express();
-const CorsOptions = {
-  origin: ['https://praktikum.tk', 'http://praktikum.tk', 'http://localhost:3000', 'https://custo.students.nomoredomains.monster'],
-  credentials: true,
-  maxAge: 300,
-};
 
-app.use(cors(CorsOptions));
+app.use(cors());
+
+// app.use(checkSource);
+
+// const CorsOptions = {
+//   origin: ['https://praktikum.tk', 'http://praktikum.tk', 'http://localhost:3000', 'https://custo.students.nomoredomains.monster'],
+//   credentials: true,
+//   maxAge: 300,
+// };
+
+// app.use(cors(CorsOptions));
 
 const { PORT, MONGO_URL } = process.env;
 

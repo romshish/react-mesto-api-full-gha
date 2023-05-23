@@ -35,7 +35,7 @@ function Register({ onRegister }) {
         <span className="enty__input-error password-input-error"></span>
       </label>
       <button className="enty__submit" type="submit">Зарегистрироваться</button>
-      <p className="enty__question">Уже зарегистрированы? <Link to="/sign-up" className="enty__link">Войти</Link></p>
+      <p className="enty__question">Уже зарегистрированы? <Link to="/sign-in" className="enty__link">Войти</Link></p>
     </form>
   );
 }
