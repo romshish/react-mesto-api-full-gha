@@ -5,6 +5,7 @@ import usersRoutes from './users.js';
 import cardsRoutes from './cards.js';
 import { createUser, login } from '../controllers/users.js';
 import NotFoundError from '../errors/not-found-err.js';
+import validateUrl from '../utils/validateUrl.js';
 
 const routes = express.Router();
 const { celebrate, Joi } = Celebrate;
@@ -20,7 +21,7 @@ routes.post('/signup', celebrate({
   body: Joi.object().keys({
     name: Joi.string().min(2).max(30),
     about: Joi.string().min(2).max(30),
-    avatar: Joi.string().uri({ scheme: ['http', 'https'] }),
+    avatar: Joi.string().custom(validateUrl),
     email: Joi.string().required().email(),
     password: Joi.string().required().min(6),
   }),
